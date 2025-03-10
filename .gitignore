@@ -2,6 +2,9 @@
 *.parquet
 *.owl
 *.csv
+*.ttl
+*.json
+*.xml
 
 
 # Byte-compiled / optimized / DLL files
