@@ -1,6 +1,7 @@
 # mk add on- ignore parquet,owl file
 *.parquet
 *.owl
+*.csv
 
 
 # Byte-compiled / optimized / DLL files
