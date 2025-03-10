@@ -1,3 +1,8 @@
+# mk add on- ignore parquet,owl file
+*.parquet
+*.owl
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
