@@ -5,6 +5,8 @@
 *.ttl
 *.json
 *.xml
+*.n3
+*.nt
 
 
 # Byte-compiled / optimized / DLL files
