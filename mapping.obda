@@ -1,0 +1,9 @@
+[PrefixDeclaration]
+:       http://example.org/ontology/
+ex:     http://example.org/
+
+[MappingDeclaration] @collection [[
+mappingId   ~person_mapping
+target      :Person/{Name} a :Person ; :name {Name} ; :age {Age} ; :city {City} .
+source      SELECT Name, Age, City FROM my_Parquet-file.parquet
+]]
