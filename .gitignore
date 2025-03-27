@@ -7,8 +7,7 @@
 *.xml
 *.n3
 *.nt
-
-
+*.tex
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
