@@ -1,0 +1,21 @@
+[PrefixDeclaration]
+people:  http://example.org/people/
+ex:     http://example.org/
+owl:    http://www.w3.org/2002/07/owl#
+rdf:    http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:    http://www.w3.org/XML/1998/namespace
+xsd:    http://www.w3.org/2001/XMLSchema#
+foaf:   http://xmlns.com/foaf/0.1/
+obda:   https://w3id.org/obda/vocabulary#
+rdfs:   http://www.w3.org/2000/01/rdf-schema#
+geo:    http://www.opengis.net/ont/geosparql#
+
+[MappingDeclaration] @collection [[
+mappingId	people-personal-data
+target		people:Person/{name} a people:Person ;# Comment 1
+                people:hasName {name}^^xsd:string ; # Comment 2
+                people:hasAge {age}^^xsd:float ;
+                people:hasCity {city}^^xsd:string .
+source      SELECT "Name" AS name, "Age" AS age, "City" as city
+            FROM "people_data"
+]]

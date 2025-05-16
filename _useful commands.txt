@@ -1,0 +1,31 @@
+Starting the stack locally:
+./stack.sh start <STACK NAME>  # starts a local stack,  e.g.  ./stack.sh start test
+
+Docker commands: 
+docker ps-a                   # lists all containers
+docker rm -f <STACK NAME>     # force delete stack called <STACK NAME>  e.g. docker rm -f test  - deletes a stack called test
+docker stack rm <STACK NAME>  # removes stack called <STACK NAME> e.g. docker stack rm test
+docker volume rm $(docker volume ls -q)  # removes all volumes
+docker rmi $(docker images -q)           # removes all images 
+
+
+
+Logins: 
+Adminer:
+Server: test-postgis:5432
+username: postgres
+passwd: Berlin-05
+database: postgres
+
+Digital Ocean: 
+passwd: mar13
+ssh public key:
+
+
+Misc: 
+start Visual Studio in Linux: 
+codedocker 
+
+
+https://github.com/TheWorldAvatar/baselib/tree/main/src/main/java/uk/ac/cam/cares/jps/base/converter
+

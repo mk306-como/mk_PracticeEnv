@@ -1,0 +1,33 @@
+[PrefixDeclaration]
+dlpno:  http://example.org/ontologies/DLPNO.owl#
+ex:     http://example.org/
+owl:    http://www.w3.org/2002/07/owl#
+rdf:    http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:    http://www.w3.org/XML/1998/namespace
+xsd:    http://www.w3.org/2001/XMLSchema#
+rdfs:   http://www.w3.org/2000/01/rdf-schema#
+
+[MappingDeclaration] @collection [[
+mappingId	dlpno-result-mapping
+target		dlpno:DLPNOResult/{source} a dlpno:DLPNOResult ;
+                         dlpno:hasSource "{source}"^^xsd:string ;
+                         dlpno:hasRouteSection "{route_section}"^^xsd:string ;
+                         dlpno:hasCharge {charge}^^xsd:unsignedByte ;
+                         dlpno:hasMultiplicity {multiplicity}^^xsd:unsignedByte ;
+                         dlpno:hasEnergy {energy}^^xsd:double ;
+                         dlpno:hasRunTime {run_time}^^xsd:unsignedInt ;
+                         dlpno:hasInputCoordinates "{input_coordinates}"^^xsd:string ;
+                         dlpno:hasDipoleAU {dipole_au}^^xsd:float ;
+                         dlpno:hasT1Diagnostic {t1_diagnostic}^^xsd:float .
+source      SELECT 
+                "source" AS source,
+                "route_section" AS route_section,
+                "charge" AS charge,
+                "multiplicity" AS multiplicity,
+                "energy" AS energy,
+                "run_time" AS run_time,
+                "input_coordinates" AS input_coordinates,
+                "dipole_au" AS dipole_au,
+                "t1_diagnostic" AS t1_diagnostic
+            FROM "dlpno_results"
+]]
